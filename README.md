@@ -1,2 +1,2 @@
 # devenv-ubuntu-dotnet
-Ubuntu 14.04 with ,net core
+Vagrant box with Ubuntu 14.04 Desktop and .net core
