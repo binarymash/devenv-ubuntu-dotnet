@@ -42,3 +42,7 @@ For the simplest .NET core application...
     $ dotnet new
     $ dotnet restore
     $ dotnet run
+
+...or, use Yeoman to scaffold a project
+
+    $ yo aspnet

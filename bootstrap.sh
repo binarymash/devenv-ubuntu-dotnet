@@ -1,20 +1,12 @@
 #!/usr/bin/env bash
 
-#dotnet apt-get feed - see https://dotnet.github.io/getting-started/
-#sudo sh -c 'echo "deb [arch=amd64] http://apt-mo.trafficmanager.net/repos/dotnet/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
-#sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
-#sudo apt-get update
-
-#dotnet
-#sudo apt-get --yes install dotnet=1.0.0-preview1-002702
-
+#dotnet apt-get feed - see https://www.microsoft.com/net/core#ubuntu 
+sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
+sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
 sudo apt-get update
 
-sudo apt-get install libunwind8
-
-curl -sSL https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/dotnet-install.sh | bash /dev/stdin --version 1.0.0-preview1-002702 --install-dir ~vagrant/dotnet
-
-sudo ln -s ~vagrant/dotnet/dotnet /usr/local/bin
+#dotnet
+sudo apt-get --yes install dotnet-dev-1.0.0-preview1-002702
 
 #npm
 curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
