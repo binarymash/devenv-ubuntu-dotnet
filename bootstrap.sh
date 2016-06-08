@@ -20,8 +20,14 @@ sudo apt-get install -y git
 #packages from npm
 npm install -g gulp-cli yo generator-aspnet
 
-#vscode 1.1
+#vscode 1.2
 URL='https://go.microsoft.com/fwlink/?LinkID=760868'; FILE='vscodetemp';  wget "$URL" -O$FILE && sudo dpkg -i $FILE; rm $FILE
+[ -d "/home/vagrant/.config" ] && echo "/vagrant/dev/.config already exists, so we won't create it" || mkdir /home/vagrant/.config
+ln -s /vagrant/.config/Code /home/vagrant/.config
+#code --install-extension ms-vscode.csharp 
+#code --install-extension DavidAnson.vscode-markdownlint
+#code --install-extension rprouse.theme-obsidian
+#code --install-extension samverschueren.yo
 
 #create dev folder and link from vagrant
 [ -d "/vagrant/dev" ] && echo "/vagrant/dev already exists, so we won't recreate it" || mkdir /vagrant/dev
